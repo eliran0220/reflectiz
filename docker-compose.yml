@@ -1,0 +1,11 @@
+version: '3.8'
+services: 
+  cron:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+        - ./src:/home/schedueler/app/src
+    ports:
+        - 3001:3001
+    command: npm run dev
