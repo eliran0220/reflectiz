@@ -2,7 +2,7 @@ import { CronJob } from 'cron';
 import axios from 'axios';
 
 
-const job = new CronJob('* * * * *', async () => {
+const job = new CronJob('0 0 1 * *', async () => {
     console.log('Sent request');
     const options = {
         method: 'GET',
